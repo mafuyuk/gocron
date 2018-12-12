@@ -5,7 +5,10 @@ import (
 	"io"
 )
 
-const jobStringHeader = "PID     Status  Label"
+const displayHeaderFormat = "%-7s %-7s %s"
+const displayFormat = "%-7d %-7d %s"
+
+var jobStringHeader = fmt.Sprintf(displayHeaderFormat, "PID", "Status", "Label")
 
 type Jobs []*Job
 
@@ -43,5 +46,5 @@ type Job struct {
 }
 
 func (j *Job) String() string {
-	return fmt.Sprintf("%d     %d  %s", j.PID, j.Status, j.Label)
+	return fmt.Sprintf(displayFormat, j.PID, j.Status, j.Label)
 }
