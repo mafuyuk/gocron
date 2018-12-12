@@ -7,15 +7,16 @@ Support target is crond.
 ```bash
 $ gocron -l
 PID     Status  Label
--1     0  docker-clean
+-1      0       com.trendmicro.itis.uninstaller
+
 ```
 
 ## display cron for all user 
 ```bash
 $ gocron -l -a
 PID     Status  Label
--1     0  com.apple.safaridavclient
--1     0  com.apple.securityuploadd
--1     0  com.apple.AddressBook.abd
+-1      0       com.apple.safaridavclient
+-1      0       com.apple.securityuploadd
+-1      0       com.apple.AddressBook.abd
 ...more
 ```
